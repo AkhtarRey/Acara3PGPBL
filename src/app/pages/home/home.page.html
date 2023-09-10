@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reciclica</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list color="success">
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img
+          src="https://media.licdn.com/dms/image/D5603AQEGO5uZkVxrrw/profile-displayphoto-shrink_800_800/0/1689565810042?e=2147483647&v=beta&t=r6_phNVsJqbAHA2IFkyXHzVvGav0pbYIU2ueTtHaT4A"
+          alt=""
+        />
+      </ion-avatar>
+      <ion-label>
+        <h1>Akhtar Reyhansyach</h1>
+        <p>Gathered: <span class="money">$15,00</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <app-pickup-call-card
+    status="hold"
+    updatedAt="25/04/2021 16:29"
+    createdAt="24/04/2021"
+    notes="we have two bags that are full. one with plastic and the other one galsses"
+  >
+    <ion-card-header header>
+      <ion-card-subtitle>Last pickup call</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button
+      color="success"
+      fill="clear"
+      size="full"
+      footer
+      (click)="goToPickupCalls()"
+      >See all...</ion-button
+    >
+  </app-pickup-call-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="newPickupCall()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
